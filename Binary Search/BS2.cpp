@@ -61,6 +61,7 @@ int32_t main()
     fio;
     return 0;
 }
-// Lower Bound: https://bit.ly/43967G5
-// Upper Bound: https://bit.ly/3IoKGce
-// Just see latest submission (Exactly above codes submitted);
+// Lower Bound: https://bit.ly/43967G5 ==> Just see latest submission (Exactly above codes submitted);
+// Upper Bound: https://bit.ly/3IoKGce ==> Just see latest submission (Exactly above codes submitted);
+// Search Insert Position: https://bit.ly/3ocI0HW ==> Just see latest submission
+// Floor and Ceil: https://www.codingninjas.com/studio/problems/ceiling-in-a-sorted-array_1825401 
