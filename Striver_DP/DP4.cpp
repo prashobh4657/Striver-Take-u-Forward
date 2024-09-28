@@ -6,7 +6,7 @@ using namespace std;
 #define fio                           \
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL);
-int tabulation_space_optimised(int n, vector<int> &h, int k)
+int tabulation_space_optimised(vector<int> &h, int k)
 {
     // TC : O(NK)
     // SC : O(K)
@@ -19,8 +19,9 @@ int tabulation_space_optimised(int n, vector<int> &h, int k)
     */
     return 0;
 }
-int tabulation(int n, vector<int> &h, int k) // TC : O(NK), SP : O(N) (dp array)
+int tabulation(vector<int> &h, int k) // TC : O(NK), SP : O(N) (dp array)
 {
+    int n=h.size();
     vector<int> dp(n, -1);
     dp[0] = 0;
     for (int i = 1; i < n; i++)
@@ -33,7 +34,7 @@ int tabulation(int n, vector<int> &h, int k) // TC : O(NK), SP : O(N) (dp array)
         }
         dp[i] = temp;
     }
-    return dp[n];
+    return dp[n-1];
 }
 int frog_jump_memoize(int n, vector<int> &h, vector<int> &dp, int k) // TC : O(NK), SP : O(N) (dp array) + O(N) (recursive stack);
 {
@@ -72,8 +73,8 @@ int32_t main()
     cout << frog_jump(n - 1, a, k) << endl;
     vector<int> dp(n, -1);
     cout << frog_jump_memoize(n - 1, a, dp, k) << endl;
-    cout << tabulation(n - 1, a, k) << endl;
-    // cout << tabulation_space_optimised(n - 1, a, k) << endl;
+    cout << tabulation(a, k) << endl;
+    // cout << tabulation_space_optimised(a, k) << endl;
     return 0;
 }
 // All functions return the cost to reach nth index;
