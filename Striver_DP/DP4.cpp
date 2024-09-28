@@ -79,3 +79,4 @@ int32_t main()
 }
 // All functions return the cost to reach nth index;
 // Since we need to reach (n-1)th index hence call for n-1 is made in main();
+// GFG Link : https://www.geeksforgeeks.org/problems/minimal-cost/1 : (Just see latest submission) 
